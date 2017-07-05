@@ -1,0 +1,21 @@
+{
+    "name": "Modificar contactos",
+    "url": "/contacts.php/modules/contacts/update/",
+    "description": "Módulo interfaz para modificar contactos",
+    "nameSpace": "Alegra.contacts.view.desktop.contacts.update.Wrapper",
+    "task": {
+        "key": "task.contacts.contacts.update.access",
+        "name": "Acceso a modificar contactos",
+        "description": "Permitir acceso a modificar contactos",
+        "pattern": "access"
+    },
+    "option": {
+        "key": "option.contacts.contacts.update.access",
+        "name": "Opción para modificar contactos",
+        "text": "Modificar contactos"
+    },
+    "event": {
+        "key": "event.contacts.contacts.update.access",
+        "description": "Acceso al módulo modificar contactos"
+    }
+}

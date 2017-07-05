@@ -1,0 +1,15 @@
+{
+    "name": "Modificar contacto",
+    "url": "/contacts.php/contacts/update/",
+    "description": "Módulo para modificar contacto",
+    "task": {
+        "key": "task.contacts.contacts.update",
+        "name": "Acceso a modificar contacto",
+        "description": "Permitir modificar contacto",
+        "pattern": "update"
+    },
+    "event": {
+        "key": "event.contacts.contacts.update.success",
+        "description": "Contacto modificado"
+    }
+}

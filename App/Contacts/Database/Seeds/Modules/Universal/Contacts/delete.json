@@ -1,0 +1,15 @@
+{
+    "name": "Eliminar contacto",
+    "url": "/contacts.php/contacts/delete/",
+    "description": "Módulo para eliminar contacto",
+    "task": {
+        "key": "task.contacts.contacts.delete",
+        "name": "Acceso a eliminar contacto",
+        "description": "Permitir eliminar contacto",
+        "pattern": "delete"
+    },
+    "event": {
+        "key": "event.contacts.contacts.delete.success",
+        "description": "Contacto eliminado"
+    }
+}

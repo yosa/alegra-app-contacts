@@ -1,0 +1,24 @@
+{
+    "name": "Ver contactos",
+    "url": "/contacts.php/modules/contacts/view",
+    "description": "Módulo interfaz para ver contactos",
+    "nameSpace": "Alegra.contacts.view.desktop.contacts.view.Wrapper",
+    "task": {
+        "key": "task.contacts.contacts.view.access",
+        "name": "Acceso a ver contactos",
+        "description": "Permitir acceso a ver contactos",
+        "pattern": "access"
+    },
+    "option": {
+        "key": "option.contacts.contacts.view.access",
+        "name": "Opción para ver contactos",
+        "text": "Contactos",
+        "iconClassSmall": "x-fa fa fa-inbox",
+        "iconClassMedium": "x-fa fa fa-inbox",
+        "iconClassLarge": "x-fa fa fa-inbox"
+    },
+    "event": {
+        "key": "event.contacts.contacts.view.access",
+        "description": "Acceso al módulo ver contactos"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Ver reporte de contactos",
+    "url": "/contacts.php/contacts/report/",
+    "description": "Módulo para ver reporte de contactos",
+    "task": {
+        "key": "task.contacts.contacts.report",
+        "name": "Acceso a ver reporte de contactos",
+        "description": "Permitir ver reporte de contactos",
+        "pattern": "read"
+    },
+    "event": {
+        "key": "event.contacts.contacts.report.success",
+        "description": "Acceso a reporte de contactos"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Paginar lista de precios",
+    "url": "/contacts.php/priceList/",
+    "description": "Módulo para paginar lista de precios",
+    "task": {
+        "key": "task.contacts.priceList.paging",
+        "name": "Paginar lista de precios",
+        "description": "Permitir paginar lista de precios",
+        "pattern": "read"
+    }
+}

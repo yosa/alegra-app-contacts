@@ -1,0 +1,11 @@
+{
+    "name": "Paginar lista de terminos de pago",
+    "url": "/contacts.php/paymentTerms/",
+    "description": "Módulo para paginar lista de terminos de pago",
+    "task": {
+        "key": "task.contacts.paymentTerms.paging",
+        "name": "Paginar lista de terminos de pago",
+        "description": "Permitir paginar lista de terminos de pago",
+        "pattern": "read"
+    }
+}

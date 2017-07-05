@@ -1,0 +1,11 @@
+{
+    "name": "Paginar lista de contactos",
+    "url": "/contacts.php/contacts/",
+    "description": "Módulo para paginar lista de contactos",
+    "task": {
+        "key": "task.contacts.contacts.paging",
+        "name": "Paginar lista de contactos",
+        "description": "Permitir paginar lista de contactos",
+        "pattern": "read"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Paginar lista de vendedores",
+    "url": "/contacts.php/sellers/",
+    "description": "Módulo para paginar lista de vendedores",
+    "task": {
+        "key": "task.contacts.sellers.paging",
+        "name": "Paginar lista de vendedores",
+        "description": "Permitir paginar lista de vendedores",
+        "pattern": "read"
+    }
+}
