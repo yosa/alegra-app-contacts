@@ -16,6 +16,10 @@ Ext.define('Alegra.contacts.view.desktop.contacts.view.WrapperController', {
     storeReload: 'contacts',
     windowReportConfig: {
         title: 'Contacto'
+    },
+    
+    onShowContact: function(button) {
+        this.onShowItemReport(null, button.getViewModel().get('record'));
     }
     
 });

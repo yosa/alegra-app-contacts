@@ -56,12 +56,10 @@ Ext.define('Alegra.contacts.view.desktop.contacts.view.Grid', {
                 xtype: 'button',
                 iconCls: 'x-fa fa-eye',
                 tooltip: 'Ver contacto',
+                handler: 'onShowContact',
                 bind: {
                     melisa: '{modules.view}',
                     hidden: '{!modules.view.allowed}'
-                },
-                listeners: {
-                    click: 'onShowItemReport'
                 }
             }
         },
