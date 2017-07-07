@@ -15,11 +15,7 @@ class CreateLogic extends BaseCreateLogic
     protected $endPoint = 'contacts';
     
     public function executeApi($input)
-    {
-        if( !$this->isValid($input)) {
-            return false;
-        }
-        
+    {        
         $this->formatInput($input);
         return parent::executeApi($input);
     }
@@ -28,6 +24,23 @@ class CreateLogic extends BaseCreateLogic
     {
         $this->formatType($input);
         $this->formatAddress($input);
+        $this->formatInternalContacts($input);
+    }
+    
+    public function formatInternalContacts(&$input)
+    {
+        if( empty($input['internalContacts'])) {
+            $input ['internalContacts']= [];
+            return;
+        }
+        
+        $input ['internalContacts']= json_decode($input['internalContacts']);
+        
+        /* format record, in api is necesary send lastName and not lastname */
+        foreach($input['internalContacts'] as $i=>&$contact) {
+            $contact->lastName = $contact->lastname;
+            unset($contact->lastname);
+        }
     }
     
     public function formatType(&$input)
@@ -42,7 +55,6 @@ class CreateLogic extends BaseCreateLogic
     public function formatAddress(&$input)
     {
         $obj = new \stdClass();
-        $obj->address = $input['address'];
         $obj->city = $input['city'];
         $obj->street = $input['street'];
         $obj->exteriorNumber = $input['exteriorNumber'];
@@ -67,32 +79,6 @@ class CreateLogic extends BaseCreateLogic
             $input['state'],
             $input['zipCode']            
         );
-    }
-    
-    public function isValid(&$input)
-    {
-        if( isset($input['type']) && !$this->isValidType($input['type'])) {
-            return false;
-        }
-        
-        return true;
-    }
-    
-    public function isValidType($type)
-    {
-        $inputType = json_decode($type, true, 2);
-        
-        if( !$inputType || !is_array($inputType)) {
-            return $this->error('Dato invalido en el campo type');
-        }
-        
-        /* http://php.net/array_intersect */
-        if( count(array_intersect($inputType, ['client', 'provider'])) 
-            == count($inputType)) {
-            return true;
-        }
-        
-        return $this->error('Dato invalido en el campo tipo de contacto, solo se permite client y provider');
     }
     
 }

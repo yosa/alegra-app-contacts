@@ -21,17 +21,33 @@ Ext.define('Alegra.contacts.view.desktop.contacts.view.Grid', {
         {
             dataIndex: 'identification',
             text: 'RFC',
-            flex: 1
+            flex: 1,
+            sortable: false
         },
         {
-            dataIndex: 'phone1',
+            dataIndex: 'phonePrimary',
             text: 'Teléfono 1',
-            flex: 1
+            flex: 1,
+            sortable: false
+        },
+        {
+            dataIndex: 'email',
+            text: 'Correo electrónico',
+            flex: 1,
+            hidden: true
+        },
+        {
+            dataIndex: 'phoneSecondary',
+            text: 'Teléfono secundario',
+            flex: 1,
+            hidden: true,
+            sortable: false
         },
         {
             dataIndex: 'observations',
             text: 'Observaciones',
-            width: 200
+            width: 200,
+            sortable: false
         },
         {
             xtype: 'widgetcolumn',
@@ -57,8 +73,8 @@ Ext.define('Alegra.contacts.view.desktop.contacts.view.Grid', {
                 iconCls: 'x-fa fa-pencil',
                 tooltip: 'Modificar contacto',
                 bind: {
-                    melisa: '{modules.delete}',
-                    hidden: '{!modules.delete.allowed}'
+                    melisa: '{modules.update}',
+                    hidden: '{!modules.update.allowed}'
                 },
                 listeners: {
                     click: 'moduleRun',

@@ -13,10 +13,8 @@ class ModulesDesktopSeeder extends InstallSeeder
 {
     
     public function run()
-    {
-        
-        $this->contacts();
-        
+    {        
+        $this->contacts();        
     }
     
     public function contacts()
@@ -25,6 +23,10 @@ class ModulesDesktopSeeder extends InstallSeeder
             'add',
             'view',
             'update',
+        ]);
+        $this->installAssetCss('app.contacts.contacts.report', [
+            'name'=>'CSS report contact',
+            'path'=>'/contacts/css/contacts-report.css',
         ]);
     }
     

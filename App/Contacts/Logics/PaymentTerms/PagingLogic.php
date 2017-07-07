@@ -16,32 +16,32 @@ class PagingLogic
             'data'=>[
                 [
                     'days'=>'Vencimiento manual',
-                    'idLocal'=>0,
+                    'id'=>0,
                     'name'=>'Vencimiento manual',
                 ],
                 [
                     'days'=>'0',
-                    'idLocal'=>1,
+                    'id'=>1,
                     'name'=>'De contado',
                 ],
                 [
                     'days'=>'8',
-                    'idLocal'=>2,
+                    'id'=>2,
                     'name'=>'8 días',
                 ],
                 [
                     'days'=>'15',
-                    'idLocal'=>3,
+                    'id'=>3,
                     'name'=>'15 días',
                 ],
                 [
                     'days'=>'30',
-                    'idLocal'=>4,
+                    'id'=>4,
                     'name'=>'30 días',
                 ],
                 [
                     'days'=>'60',
-                    'idLocal'=>5,
+                    'id'=>5,
                     'name'=>'60 días',
                 ],
             ]

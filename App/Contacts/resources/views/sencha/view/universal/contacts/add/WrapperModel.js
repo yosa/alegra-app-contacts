@@ -3,20 +3,16 @@ Ext.define('Alegra.contacts.view.universal.contacts.add.WrapperModel', {
     alias: 'viewmodel.contactsContactsAdd',
     
     stores: {
+        internalContacts: {
+            proxy: {
+                type: 'memory',
+                data: []
+            }
+        },
         settlements: {
             proxy: {
                 type: 'ajax',
                 url: '{modules.settlements}',
-                reader: {
-                    type: 'json',
-                    rootProperty: 'data'
-                }
-            }
-        },
-        terms: {
-            proxy: {
-                type: 'ajax',
-                url: '{modules.terms}',
                 reader: {
                     type: 'json',
                     rootProperty: 'data'
@@ -54,18 +50,18 @@ Ext.define('Alegra.contacts.view.universal.contacts.add.WrapperModel', {
             }
         },
         typesContacts: {
+            data: [
+                {
+                    id: 'client',
+                    name: 'Cliente'
+                },
+                {
+                    id: 'provider',
+                    name: 'Proveedor'
+                }
+            ],
             proxy: {
-                type: 'memory',
-                data: [
-                    {
-                        id: 'client',
-                        name: 'Cliente'
-                    },
-                    {
-                        id: 'provider',
-                        name: 'Proveedor'
-                    }
-                ]
+                type: 'memory'
             }
         }
     }
