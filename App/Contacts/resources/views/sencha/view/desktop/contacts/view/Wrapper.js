@@ -24,17 +24,17 @@ Ext.define('Alegra.contacts.view.desktop.contacts.view.Wrapper', {
                 {
                     ptype: 'autofilters',
                     filters: {
-                        key: {
+                        name: {
                             operator: 'like',
                             minChars: 1
-                        },
-                        shortname: {
-                            operator: 'like'
-                        },
-                        name: {
-                            operator: 'like'
                         }
-                    }
+                    },
+                    filtersIgnore: [
+                        'phonePrimary',
+                        'identification',
+                        'observations',
+                        'email'
+                    ]
                 },
                 {
                     ptype: 'floatingbutton',

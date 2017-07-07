@@ -17,6 +17,7 @@ class PagingRequest extends WithFilter
         'limit'=>'bail|required|xss|numeric',
         'filter'=>'bail|sometimes|json|filter:name,identification,phone1,observations',
         'query'=>'bail|sometimes',
+        'sort'=>'bail|sometimes|json|sort:name,email',
     ];
     
     public $rulesFilters = [

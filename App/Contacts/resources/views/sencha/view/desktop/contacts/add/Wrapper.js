@@ -12,10 +12,11 @@ Ext.define('Alegra.contacts.view.desktop.contacts.add.Wrapper', {
     defaultFocus: 'txtName',
     controller: 'contactsContactsAdd',
     layout: 'fit',
-    height: '95%',
-    width: '95%',
-    maxWidth: '95%',
-    minWidth: '95%',
+    height: '100%',
+    width: '100%',
+    maxWidth: '100%',
+    minWidth: '90%',
+    bodyPadding: 0,
     viewModel: {
         type: 'contactsContactsAdd'
     },

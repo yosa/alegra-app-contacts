@@ -6,9 +6,13 @@ use Melisa\Laravel\Http\Controllers\Controller;
 use App\Contacts\Http\Requests\Contacts\PagingRequest;
 use App\Contacts\Http\Requests\Contacts\CreateRequest;
 use App\Contacts\Http\Requests\Contacts\DeleteRequest;
+use App\Contacts\Http\Requests\Contacts\UpdateRequest;
 use App\Contacts\Logics\Contacts\PagingLogic;
 use App\Contacts\Logics\Contacts\CreateLogic;
 use App\Contacts\Logics\Contacts\DeleteLogic;
+use App\Contacts\Logics\Contacts\ReportLogic;
+use App\Contacts\Logics\Contacts\UpdateLogic;
+use App\Contacts\Modules\Universal\Contacts\ReportModule;
 
 /**
  * 
@@ -29,6 +33,26 @@ class ContactsController extends Controller
     }
     
     public function delete(DeleteRequest $request, DeleteLogic $logic)
+    {
+        return $this->responseJson($logic, $request);
+    }
+    
+    public function report($id, $format, ReportModule $module, ReportLogic $logic)
+    {
+        $input = [
+            'id'=>$id
+        ];
+        
+        if( $format === 'json') {
+            return response()->data($logic->init($input));
+        }
+        
+        return $module
+            ->withInput($logic->init($input))
+            ->render($id);
+    }
+    
+    public function update(UpdateRequest $request, UpdateLogic $logic)
     {
         return $this->responseJson($logic, $request);
     }

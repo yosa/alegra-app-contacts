@@ -4,8 +4,9 @@ Ext.define('Alegra.contacts.view.universal.contacts.view.WrapperModel', {
     
     stores: {
         contacts: {
-            autoLoad: false,
+            autoLoad: true,
             remoteFilter: true,
+            remoteSort: true,
             proxy: {
                 type: 'ajax',
                 url: '{modules.contacts}',

@@ -4,6 +4,8 @@ namespace App\Contacts\Http\Requests\Contacts;
 
 use Melisa\Laravel\Http\Requests\Generic;
 use Melisa\Sanitizes\BeforeSanitize;
+use App\Contacts\Http\Validations\Contacts\TypeValidation;
+use App\Contacts\Http\Validations\Contacts\InternalContactsValidation;
 
 /**
  * 
@@ -26,7 +28,6 @@ class CreateRequest extends Generic
         'priceList'=>'nullable|xss',
         'seller'=>'nullable|xss',
         'term'=>'nullable|xss',
-        'address'=>'nullable|xss',
         'city'=>'nullable|xss',
         'street'=>'nullable|xss',
         'exteriorNumber'=>'nullable|xss',
@@ -37,9 +38,18 @@ class CreateRequest extends Generic
         'municipality'=>'nullable|xss',
         'state'=>'nullable|xss',
         'zipCode'=>'nullable|xss',
-        'type'=>'nullable|xss|json',
+        'type'=>'nullable|xss|json|custom_type',
+        'internalContacts'=>'nullable|xss|json|custom_internalContacts',
     ];
     
     protected $sanitizes = [];
+    
+    public function applicableValidations()
+    {
+        return collect([
+            new TypeValidation(),
+            new InternalContactsValidation()
+        ]);
+    }
     
 }

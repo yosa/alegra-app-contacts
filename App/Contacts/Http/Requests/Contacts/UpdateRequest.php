@@ -2,7 +2,7 @@
 
 namespace App\Contacts\Http\Requests\Contacts;
 
-use App\Contacts\Http\Requests\Banks\CreateRequest;
+use App\Contacts\Http\Requests\Contacts\CreateRequest;
 
 /**
  * 
@@ -19,7 +19,7 @@ class UpdateRequest extends CreateRequest
     public function rules()
     {        
         $rules = parent::rules();
-        $rules ['id']= 'bail|required|max:36|xss|exists:insurance.customersContacts,id';        
+        $rules ['id']= 'required';        
         return $rules;        
     }
     
