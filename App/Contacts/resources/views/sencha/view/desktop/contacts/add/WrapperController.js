@@ -137,10 +137,7 @@ Ext.define('Alegra.contacts.view.desktop.contacts.add.WrapperController', {
             });
         });
         
-        if( internalContacts.length) {
-            me.getView().down('#txtInternalContacts').setValue(Ext.encode(internalContacts));
-        }
-        
+        me.getView().down('#txtInternalContacts').setValue(Ext.encode(internalContacts));        
         me.callParent(arguments);
     }
     

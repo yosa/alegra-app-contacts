@@ -34,6 +34,10 @@ class InternalContactsValidation extends CustomValidation
             $input = json_decode($value, true);
             
             if(empty($input)) {
+                return true;
+            }
+            
+            if( is_null($input)) {
                 return false;
             }
             

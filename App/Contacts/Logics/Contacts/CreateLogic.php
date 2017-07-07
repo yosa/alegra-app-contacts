@@ -29,12 +29,13 @@ class CreateLogic extends BaseCreateLogic
     
     public function formatInternalContacts(&$input)
     {
+        $input ['internalContacts']= json_decode($input['internalContacts']);
+        
+        /* api no delete */
         if( empty($input['internalContacts'])) {
-            $input ['internalContacts']= [];
+            $input ['internalContacts']= null;
             return;
         }
-        
-        $input ['internalContacts']= json_decode($input['internalContacts']);
         
         /* format record, in api is necesary send lastName and not lastname */
         foreach($input['internalContacts'] as $i=>&$contact) {
