@@ -29,3 +29,45 @@ Entregables:
 
 1. URL donde podamos ver en funcionamiento el desarrollo
 2. Dirección de acceso al repositorio en GitHub
+
+# Screenshot
+
+Login
+
+![alt text](https://raw.githubusercontent.com/yosa/alegra-app-contacts/master/public/contacts/screenshot/login.jgp)
+
+---
+
+Panel
+
+![alt text](https://raw.githubusercontent.com/yosa/alegra-app-contacts/master/public/contacts/screenshot/panel.jgp)
+
+---
+
+Main menu
+
+![alt text](https://raw.githubusercontent.com/yosa/alegra-app-contacts/master/public/contacts/screenshot/mainMenu.jgp)
+
+---
+
+Contacts
+
+![alt text](https://raw.githubusercontent.com/yosa/alegra-app-contacts/master/public/contacts/screenshot/contacts.jgp)
+
+---
+
+Reporte de contacto
+
+![alt text](https://raw.githubusercontent.com/yosa/alegra-app-contacts/master/public/contacts/screenshot/contactReport.jgp)
+
+---
+
+Add contact
+
+![alt text](https://raw.githubusercontent.com/yosa/alegra-app-contacts/master/public/contacts/screenshot/contactAdd.jgp)
+
+---
+
+Add person associated with the contact
+
+![alt text](https://raw.githubusercontent.com/yosa/alegra-app-contacts/master/public/contacts/screenshot/contactAddPeople.jgp)
